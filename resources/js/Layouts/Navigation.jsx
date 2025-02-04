@@ -15,7 +15,7 @@ export default function Navigation() {
                 <Container>
                     <div className="flex items-center justify-between">
                         <Link href="/">
-                            <ApplicationLogo className="h-[40px] w-[150px] fill-current text-gray-500" />
+                            <ApplicationLogo className="lg:h-[40px] lg:w-[150px] fill-current text-gray-500" />
                         </Link>
 
                         <div className="flex flex-1 items-center justify-end">

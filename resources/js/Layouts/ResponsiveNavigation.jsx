@@ -16,7 +16,7 @@ export default function ResponsiveNavigation() {
         <nav className="border-b border-gray-100 shadow px-4 py-4 lg:hidden">
             <div className="flex items-center justify-between">
                 <Link href="/">
-                    <ApplicationLogo className="h-[30px] w-[120px] fill-current text-gray-500" />
+                    <ApplicationLogo className="w-24 fill-current text-gray-500" />
                 </Link>
                 <DropdownMenu>
                     <DropdownMenuTrigger>
