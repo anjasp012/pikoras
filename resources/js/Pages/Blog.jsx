@@ -9,7 +9,7 @@ import NavbarBlog from "@/Layouts/NavbarBlog";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 
-export default function Blog({ postCategories, posts, q }) {
+export default function Blog({ postCategories, posts, postRecommendations, q }) {
     const [search, setSearch] = useState(q);
 
     function submit(e) {
@@ -35,7 +35,7 @@ export default function Blog({ postCategories, posts, q }) {
                             )}
                             <div className='col-span-1 lg:col-span-6 lg:order-2'>
                                 <div className="mb-4">
-                                    <h6 className="text-[24px] font-bold mb-2">Search Blog</h6>
+                                    <h6 className="lg:text-[24px] font-bold mb-2">Search Blog</h6>
                                     <form onSubmit={submit} className="flex gap-2 md:gap-4">
                                         <Input className='bg-[#D9D9D9]/40 w-full border-none' type="text" placeholder='Search'
                                             value={search}
@@ -44,8 +44,17 @@ export default function Blog({ postCategories, posts, q }) {
                                     </form>
                                 </div>
                                 <div className="mb-0">
-                                    <h6 className="text-[24px] font-bold mb-2">Recommended for You</h6>
+                                    <h6 className="lg:text-[24px] font-bold mb-2">Recommended for You</h6>
                                     <div className="flex flex-col gap-3">
+                                        {postRecommendations.data.map((article, index) => (
+                                            <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
+                                                <h5 className='font-bold line-clamp-1 group-hover:text-primary'>{article.post_name}</h5>
+                                                <div className="flex justify-between items-end">
+                                                    <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
+                                                    <small className='text-[14px] text-light'>{article.created_at}</small>
+                                                </div>
+                                            </Link>
+                                        ))}
                                         {/* <Link href="dd" className="border border-black rounded w-full py-2 px-3">
                                             <div className="flex justify-between items-end">
                                                 <div className='flex flex-col'>

@@ -13,6 +13,7 @@ export default function Blog({
     postCategories,
     postCategory,
     posts,
+    postRecommendations,
     meta_title,
     meta_description,
     meta_keyword,
@@ -69,7 +70,7 @@ export default function Blog({
                                     key={index}
                                     className={
                                         index == 0
-                                            ? "w-12/12 md:col-span-12"
+                                            ? "w-full md:col-span-12"
                                             : "flex-1 md:col-span-4"
                                     }
                                 >
@@ -87,13 +88,15 @@ export default function Blog({
                                 <div className="mb-0">
                                     <h6 className="text-[24px] font-bold mb-2">Recommended for You</h6>
                                     <div className="flex flex-col gap-3">
-                                        {/* <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
-                                            <h5 className='font-bold line-clamp-1 group-hover:text-primary'>8 Best Quality T-Shirts for Printing</h5>
-                                            <div className="flex justify-between items-end">
-                                                <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
-                                                <small className='text-[14px] text-light'>23 Januari 2025</small>
-                                            </div>
-                                        </Link> */}
+                                        {postRecommendations.data.map((article, index) => (
+                                            <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
+                                                <h5 className='font-bold line-clamp-1 group-hover:text-primary'>{article.post_name}</h5>
+                                                <div className="flex justify-between items-end">
+                                                    <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
+                                                    <small className='text-[14px] text-light'>{article.created_at}</small>
+                                                </div>
+                                            </Link>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

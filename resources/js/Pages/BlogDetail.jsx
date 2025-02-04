@@ -63,7 +63,7 @@ export default function Blog({
 
                             <img
                                 src={`/storage/${article.post_thumbnail}`}
-                                className="w-full object-cover lg:h-[320px] rounded-lg lg:rounded-xl mb-6"
+                                className="w-full object-cover lg:h-[22vw] rounded-lg lg:rounded-xl mb-6"
                                 alt={article.post_name}
                             />
                             <h1 className="text-2xl lg:text-[32px] font-bold mb-4">
@@ -248,7 +248,7 @@ export default function Blog({
                             <div className="grid gap-4">
                                 {articles.data.map((post, index) => (
                                     <div key={index} className="col-span-1">
-                                        <BlogCard post={post} imgheigh={"h-[100px] md:h-[150px] lg:h-[140px]"} />
+                                        <BlogCard post={post} imgheigh={"lg:h-[12vw]"} />
                                     </div>
                                 ))}
                             </div>

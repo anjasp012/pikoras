@@ -24,9 +24,9 @@ export default function About() {
             <header className="bg-[url('/assets/img/about_header.png')] bg-cover h-[30vw]">
                 <Container>
                     <div className="flex flex-col justify-center h-[30vw] gap-2 sm:gap-8 items-center sm:items-start">
-                    <img src="/assets/img/Logo_Only_White.png" alt="Logo_Only_White.png" className="w-[5vw]" />
-                    <h5 className="text-white font-bold italic md:text-[40px] leading-[120%]">Turning Your Creativity into <br />
-                    Products and Valuable Things.</h5>
+                        <img src="/assets/img/Logo_Only_White.png" alt="Logo_Only_White.png" className="w-[5vw]" />
+                        <h5 className="text-white font-bold italic md:text-[40px] leading-[120%]">Turning Your Creativity into <br />
+                            Products and Valuable Things.</h5>
                     </div>
                 </Container>
             </header>
@@ -45,35 +45,17 @@ export default function About() {
                                 We Are Here for You!
                             </h5>
                             <p className="text-sm sm:text-[18px] font-[300] leading-[150%]">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
+                                To inspire creativity, celebrate individuality, and empower people to make meaningful contributions to themselves and the world. To empower individuals and businesses to bring their ideas to life, creating a sustainable and collaborative ecosystem where everyone thrives.
                             </p>
                         </div>
                     </div>
                     <div className="sm:grid flex flex-col-reverse sm:grid-cols-12 gap-4 sm:gap-8 items-center mb-10">
                         <div className="col-span-1 sm:col-span-6">
                             <h5 className="text-2xl sm:text-[36px] font-bold mb-1 sm:mb-2 leading-[120%]">
-                                Helping You Out, is What Keeps Us Go2ing.
+                                Helping You Out, is What Keeps Us Going.
                             </h5>
                             <p className="text-sm sm:text-[18px] font-[300] leading-[150%]">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
+                                Deliver an innovative with personalized solutions that enable creativity and leave a lasting impact, while fostering a culture of purpose and legacy-building. Also, to provide high-quality printing solutions while fostering a culture of shared growth, responsibility, and giving back to the community.
                             </p>
                         </div>
                         <div className="col-span-1 sm:col-span-6">
@@ -94,19 +76,11 @@ export default function About() {
                         </div>
                         <div className="col-span-1 sm:col-span-6">
                             <h5 className="text-2xl sm:text-[36px] font-bold mb-1 sm:mb-2 leading-[120%]">
-                                Always Changing for The Better.
+                                Always Improve
+                                for The Best Solutions
                             </h5>
                             <p className="text-sm sm:text-[18px] font-[300] leading-[150%]">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
+                                We’re committed to growing alongside our customers, partners, and team members. To builds the long-lasting relationships that benefit everyone. Collaborate and support each other to overcome challenges and celebrate successes.
                             </p>
                         </div>
                     </div>

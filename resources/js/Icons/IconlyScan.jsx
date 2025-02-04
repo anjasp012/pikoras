@@ -1,4 +1,4 @@
-export const IconlyScan = ({ color = "#000000" }) => {
+export const IconlyScan = ({ className = "", color = "#000000" }) => {
     return (
         <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -6,6 +6,7 @@ export const IconlyScan = ({ color = "#000000" }) => {
                 clipRule="evenodd"
                 d="M5.94506 11.1146H18.7551C18.3551 7.62463 16.5251 6.33463 12.3551 6.33463C8.18506 6.33463 6.35506 7.62463 5.94506 11.1146Z"
                 fill={color}
+                className={className}
             ></path>
             <path
                 fillRule="evenodd"

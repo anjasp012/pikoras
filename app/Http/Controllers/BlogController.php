@@ -18,10 +18,10 @@ class BlogController extends Controller
         if (isset($request->search)) {
             $query->where('post_name', '%'. $request->search . '%');
         }
-        $posts = new PostCollection($query->paginate(11));
         $data = [
             'postCategories' => $postCategories,
-            'posts' => $posts,
+            'posts' => new PostCollection($query->paginate(11)),
+            'postRecommendations' => new PostCollection($query->where('view_count', '>', 10)->orderBy('view_count', 'desc')->take(3)->get()),
             'q' => $request->search ?? ''
         ];
         return inertia('Blog', $data);
@@ -39,6 +39,7 @@ class BlogController extends Controller
             'postCategory' => $postCategory,
             'postCategories' => $postCategories,
             'posts' => new PostCollection($posts->where('post_category_id', $postCategory->id)->paginate(6)),
+            'postRecommendations' => new PostCollection($posts->where('view_count', '>', 10)->where('post_category_id', $postCategory->id)->orderBy('view_count', 'desc')->take(3)->get()),
             'meta_title' => $postCategory->meta_title,
             'meta_keyword' => $postCategory->meta_keyword,
             'meta_description' => $postCategory->meta_description,

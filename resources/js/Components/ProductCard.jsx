@@ -36,11 +36,11 @@ export default function ProductCard({ product }) {
             <CardHeader className="p-0">
                 <Dialog>
                     <DialogTrigger asChild>
-                        <div className="overflow-hidden rounded-xl sm:rounded-3xl w-full h-[140px] sm:h-[280px]">
+                        <div className="overflow-hidden rounded-xl sm:rounded-3xl w-full h-[140px] sm:h-[280px] bg-[#f7f7f7]">
                             <img
                                 id="img"
                                 src={imageSrc}
-                                className="hover:scale-105 transition-all rounded-xl sm:rounded-3xl w-full h-[140px] sm:h-[280px] object-cover"
+                                className="hover:scale-105 transition-all rounded-xl sm:rounded-3xl w-full h-[140px] sm:h-[280px] object-contain object-top"
                                 alt={product.product_name}
                             />
                         </div>
@@ -112,9 +112,9 @@ export default function ProductCard({ product }) {
                     <span className="font-[300] text-[11px] block mb-1">
                         Available on:
                     </span>
-                    <div className="grid grid-cols-3 items-center gap-4">
+                    <div className="grid grid-cols-3 lg:grid-cols-11 items-center gap-3 lg:gap-4">
                         <a
-                            className="col-span-1"
+                            className="col-span-1 lg:col-span-3"
                             href={`${product.link_shopee}`}
                         >
                             <img
@@ -124,7 +124,7 @@ export default function ProductCard({ product }) {
                             />
                         </a>
                         <a
-                            className="col-span-1 mt-px md:mt-1 scale-125"
+                            className="col-span-1 lg:col-span-3 mt-px md:mt-px scale-110 lg:scale-125"
                             href={`${product.link_tokopedia}`}
                         >
                             <img
@@ -134,7 +134,7 @@ export default function ProductCard({ product }) {
                             />
                         </a>
                         <a
-                            className="col-span-1 mt-1 md:mt-2"
+                            className="col-span-1 lg:col-span-3 mt-1 md:mt-1"
                             href={`${product.link_lazada}`}
                         >
                             <img

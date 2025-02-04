@@ -1,6 +1,7 @@
-export const IconlySetting = ({ size = "", color = "#000000" }) => {
+export const IconlySetting = ({ className = "", size = "", color = "#000000" }) => {
     return (
         <svg
+            className={className}
             width={size}
             height={size}
             viewBox="0 0 24 24"

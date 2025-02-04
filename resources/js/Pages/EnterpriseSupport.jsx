@@ -78,8 +78,8 @@ export default function personalUse() {
                     <p className="text-center text-[#5d5641] font-medium text-sm md:text-2xl">
                         Send us a message from right here using the form below!
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-12 mt-10 md:gap-8">
-                        <div className="col-span-2 md:col-span-12">
+                    <div className="grid grid-cols-2 md:grid-cols-12 justify-center mt-10 md:gap-8">
+                        <div className="col-span-2 md:col-span-8 lg:col-start-3">
                             <form onSubmit={submit}>
                                 <div className="grid gap-6">
                                     <div className="grid gap-2">
@@ -150,7 +150,7 @@ export default function personalUse() {
                                         />
                                         <label
                                             htmlFor="terms"
-                                            className="font-light leading-[150%] peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[14px] md:text-normal"
+                                            className="font-light leading-[150%] peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[14px] md:text-normal tracking-widest"
                                         >
                                             I agree to my data being processed
                                             in accordance with Pikora’s Privacy

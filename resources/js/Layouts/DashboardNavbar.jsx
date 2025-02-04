@@ -132,9 +132,9 @@ export default function DashboardNavbar({ children }) {
                         <DropdownMenuContent className="bg-white me-4">
                             <DropdownMenuLabel>Hii, Admin</DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                            {/* <DropdownMenuItem className="focus:bg-gray-100">
-                                <Link href='setting'>Setting</Link>
-                            </DropdownMenuItem> */}
+                            <DropdownMenuItem className="focus:bg-gray-100">
+                                <Link href={route('admin.setting.index')}>Setting</Link>
+                            </DropdownMenuItem>
                             <DropdownMenuItem className="focus:bg-gray-100">
                                 <Link method="POST" className="text-start w-full" href={route('logout')}>
                                     Logout

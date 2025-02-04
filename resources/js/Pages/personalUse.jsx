@@ -52,7 +52,7 @@ export default function personalUse({ posts }) {
                 <Container>
                     <div className="flex flex-col-reverse lg:grid lg:grid-cols-11 gap-4 lg:gap-14">
                         <div className="sm:col-span-5">
-                            <h1 className="text-3xl md:text-[40px] lg:text-[70px] font-bold leading-[120%] text-[#191F2C] tracking-[-2%] mb-2 lg:mb-0">
+                            <h1 className="text-3xl md:text-[40px] lg:text-[48px] font-bold leading-[120%] text-[#191F2C] tracking-[-2%] mb-2 lg:mb-0">
                                 Express Yourself With Pikora!
                             </h1>
                             <p className="text-light text-sm md:text-[15px] sm:text-normal">
@@ -90,9 +90,9 @@ export default function personalUse({ posts }) {
                     </div>
                 </Container>
             </section>
-            <section className="mt-10 lg:mt-4">
+            <section className="mt-10 lg:mt-8">
                 <Container>
-                    <h3 className="text-2xl md:text-[32px] lg:text-[70px] text-center font-bold text-[#191F2C] mb-10 leading-[120%]">
+                    <h3 className="text-2xl md:text-[32px] lg:text-[48px] text-center font-bold text-[#191F2C] mb-10 leading-[120%]">
                         You Can Visit Our Official Stores
                     </h3>
                     <div className="w-[80%] lg:w-[70%] mx-auto mb-8 md:mb-14">
@@ -142,16 +142,16 @@ export default function personalUse({ posts }) {
             </section>
             <section className="mb-16">
                 <Container>
-                    <h3 className="text-center font-bold text-lg sm:text-3xl mb-2">
+                    <h3 className="lg:text-center font-bold text-lg sm:text-3xl mb-2">
                         Discover more about Us!
                     </h3>
-                    <p className="text-center">Get support every step of the way with in-depth resources and tutorials</p>
+                    <p className="lg:text-center">Get support every step of the way with in-depth resources and tutorials</p>
                     <div className="grid grid-cols-4 gap-6 mt-8">
                         {posts.data.map((post, index) => (
                             <>
                                 <div
                                     key={index}
-                                    className="col-span-1"
+                                    className="col-span-2 lg:col-span-1"
                                 >
                                     <BlogCard
                                         post={post}

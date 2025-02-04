@@ -21,8 +21,8 @@ export default function Home() {
         slidesToShow: 2.5,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 6000,
+        autoplaySpeed: 0,
         cssEase: "linear",
         rtl: false,
         pauseOnHover: false,
@@ -33,8 +33,8 @@ export default function Home() {
         slidesToShow: 2.5,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 6000,
+        autoplaySpeed: 0,
         cssEase: "linear",
         rtl: true,
         pauseOnHover: false,
@@ -64,7 +64,8 @@ export default function Home() {
                                     <span className="font-bold italic">
                                         Custom Printing Solutions{" "}
                                     </span>
-                                    <span className="font-light">
+                                    <br />
+                                    <span className="text-4xl font-light">
                                         for Everyone.
                                     </span>
                                 </h1>
@@ -87,7 +88,7 @@ export default function Home() {
                                     <Link
                                         onClick={(e) => (
                                             e.preventDefault(),
-                                            toast("Cooming Soon", {
+                                            toast("Coming Soon", {
                                                 icon: "👊",
                                             })
                                         )}
@@ -104,7 +105,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="mt-6 flex flex-col gap-4 sm:gap-10">
-                                    <div className="grid grid-cols-12 gap-4 sm:gap-8">
+                                    <div className="grid grid-cols-12 gap-4 sm:gap-8 items-center">
                                         <div className="col-span-3">
                                             <IconlyScan color="#3d5176" />
                                         </div>
@@ -122,9 +123,9 @@ export default function Home() {
                                         </div>
                                     </div>
 
-                                    <div className="grid grid-cols-12 gap-4 sm:gap-8">
-                                        <div className="col-span-3">
-                                            <IconlyBuy color="#3d5176" />
+                                    <div className="grid grid-cols-12 gap-4 sm:gap-8 items-center">
+                                        <div className="col-span-3 mx-auto">
+                                            <img src="/assets/img/premium-logo.png" alt="premium-logo" className="h-20 lg:h-[105px]" />
                                         </div>
                                         <div className="col-span-9">
                                             <div className="font-semibold text-[#263D66] text-xl sm:text-2xl">
@@ -142,7 +143,7 @@ export default function Home() {
                                         </div>
                                     </div>
 
-                                    <div className="grid grid-cols-12 gap-4 sm:gap-8">
+                                    <div className="grid grid-cols-12 gap-4 sm:gap-8 items-center">
                                         <div className="col-span-3">
                                             <IconlySetting color="#3d5176" />
                                         </div>
@@ -177,7 +178,7 @@ export default function Home() {
                                             <Link
                                                 onClick={(e) => (
                                                     e.preventDefault(),
-                                                    toast("Cooming Soon", {
+                                                    toast("Coming Soon", {
                                                         icon: "👊",
                                                     })
                                                 )}
@@ -193,7 +194,7 @@ export default function Home() {
                                             <Link
                                                 onClick={(e) => (
                                                     e.preventDefault(),
-                                                    toast("Cooming Soon", {
+                                                    toast("Coming Soon", {
                                                         icon: "👊",
                                                     })
                                                 )}
@@ -228,9 +229,7 @@ export default function Home() {
                             You have ideas, Pikora makes them a reality!
                         </h3>
                         <p className="text-sm sm:text-[20px] text-[#191F2C]">
-                            Have a creative idea for a design? Pikora is here to
-                            bring it to life with our advanced UV printing
-                            technology!
+                            Have a creative idea for a design? Pikora is here to bring it to life with our advanced UV printing technology!
                         </p>
                     </div>
                 </div>
@@ -283,12 +282,7 @@ export default function Home() {
                                     Personalized Your Own Phone Case!
                                 </h5>
                                 <p className="text-sm sm:text-[15px] text-[#191F2C]">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
+                                    Showcase your unique style and personality! Simply add your favorite designs, quotes or artwork and Pikora will help you to create a one-of-a-kind shirt that’s truly yours. Feel confident and stand out in your own personal style.
                                 </p>
                             </div>
                         </div>
@@ -299,15 +293,11 @@ export default function Home() {
                         <div className="flex flex-col sm:grid sm:grid-cols-12 gap-4 sm:gap-8">
                             <div className="sm:col-span-3 px-4">
                                 <h5 className="text-2xl sm:text-[32px] leading-[110%] font-bold text-[#263D66] mb-2 sm:mb-4">
-                                    Personalized Your Own Style!
+                                    Personalized Your
+                                    Own Phone Case!
                                 </h5>
                                 <p className="text-sm sm:text-[15px] text-[#191F2C]">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
+                                    Protect your device in style! Choose a design that represents yourself or your interests and let Pikora turn it to life with a high quality case material. Have a case that not only keep your phone safe, but also expresses your personality well.
                                 </p>
                             </div>
                             <div className="sm:col-span-9">
@@ -355,15 +345,15 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="pb-14">
+            <section className="pb-14 mt-6 lg:mt-0">
                 <Container>
                     <div className="pb-8">
-                        <h3 className="text-center text-xl lg:text-[64px] font-bold leading-[120%] -tracking-[2%]">Create Custom Items for Your Business</h3>
-                        <h5 className="text-center text-lg lg:text-[64px] font-medium leading-[120%] -tracking-[2%]">Order in bigger quantity!</h5>
+                        <h3 className="text-center text-xl lg:text-[48px] font-bold leading-[120%] -tracking-[2%]">Create Custom Items for Your Business</h3>
+                        <h5 className="text-center text-lg lg:text-[48px] font-medium leading-[120%] -tracking-[2%]">Order in bigger quantity!</h5>
                     </div>
                 </Container>
                 <div className="relative">
-                    <div className="absolute top-10 left-1/2 -translate-x-1/2">
+                    <div className="lg:absolute lg:top-10 left-1/2 lg:-translate-x-1/2 mb-6 lg:mb-0">
                         <div className="text-center">
                             <Link
                                 href={route('product.index')}
