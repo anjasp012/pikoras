@@ -21,7 +21,7 @@
     @viteReactRefresh
     @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
     @inertiaHead
-    <meta name="google-site-verification" content="MebjjF2U47Uoo11">
+    <meta name="google-site-verification" content="MebjjF2U47Uoo11bqlE5A2bhTcFztDWR-04UKMMyf9Q">
 </head>
 
 <body class="font-sans antialiased tracking-tight">
