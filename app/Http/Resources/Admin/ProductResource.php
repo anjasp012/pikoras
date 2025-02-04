@@ -20,7 +20,8 @@ class ProductResource extends JsonResource
             'product_thumbnail' => '/storage/'.$this->product_thumbnail,
             'product_name' => $this->product_name,
             'created_at' => $this->created_at->format('d M Y'),
-            'view_count' => $this->view_count ?? 0
+            'view_count' => $this->view_count ?? 0,
+            'best_seller' => $this->best_seller
         ];
     }
 }

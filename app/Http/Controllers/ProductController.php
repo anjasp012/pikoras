@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\ProductReview;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -39,7 +40,7 @@ class ProductController extends Controller
 
     public function bestSellers() {
         $productCategories = ProductCategory::all();
-        $products = Product::with(['productVariants'])->withCount('productVariants')->orderBy('view_count', 'desc')->paginate(9);
+        $products = Product::with(['productVariants'])->withCount('productVariants')->where('best_seller', true)->paginate(9);
         $data = [
             'productCategories' => $productCategories,
             'products' => $products,
@@ -76,11 +77,21 @@ class ProductController extends Controller
     }
 
     public function detail($product_slug) {
-        $product = Product::with(['productCategory','productVariants'])->withCount('productVariants')->where('product_slug', $product_slug)->first();
+        $product = Product::with(['productCategory','productVariants','productReviews'])->withCount('productVariants')->withCount('productReviews')->where('product_slug', $product_slug)->first();
+        $rating = 0;
+        $review = 0;
+        if ($product->product_reviews_count > 0) {
+            foreach ($product->productReviews as $review) {
+                $rating += $review->rating ?? 0;
+            }
+            $product_reviews_count = $product->product_reviews_count ?? 0;
+            $review = $rating/$product_reviews_count;
+        }
         $product->update(['view_count'=> $product->view_count + 1]);
         $products = Product::where('product_category_id', $product->product_category_id)->take(4)->get();
         $data = [
             'products' => $products,
+            'review' => $review,
             'product' => $product,
             'title' => $product->product_name,
             'meta_title' => $product->meta_title,
@@ -88,5 +99,14 @@ class ProductController extends Controller
             'meta_description' => $product->meta_description,
         ];
         return inertia('ProductDetail', $data);
+    }
+
+    public function submitRating(Request $request) {
+        $inputValues = $request->validate([
+            'rating' => 'required',
+            'product_id' => 'required',
+        ]);
+        ProductReview::create($inputValues);
+        return back()->with('success', 'Terima Kasih, Review anda telah tersimpan!');
     }
 }

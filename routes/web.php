@@ -17,6 +17,7 @@ Route::get('/products/category/best-sellers', [ProductController::class, 'bestSe
 Route::get('/products/category/all-products', [ProductController::class, 'allProducts'])->name('product.allProducts');
 Route::get('/products/category/{product_category_slug}', [ProductController::class, 'byCategory'])->name('product.category');
 Route::get('/products/{product_slug}', [ProductController::class, 'detail'])->name('product.detail');
+Route::post('/products/submitRating', [ProductController::class, 'submitRating'])->name('product.submitRating');
 Route::get('/about-us', AboutController::class)->name('about');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blogs/{post_slug}', [BlogController::class, 'detail'])->name('blog.detail');
@@ -31,6 +32,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', DashboardController::class)->name('dashboard');
     Route::resource('product-category', App\Http\Controllers\Admin\ProductCategoryController::class);
     Route::resource('product', App\Http\Controllers\Admin\ProductController::class);
+    Route::put('product/bestSellerSwith/{id}', [App\Http\Controllers\Admin\ProductController::class, 'bestSellerSwitch'])->name('product.bestSellerSwitch');
     Route::resource('post-category', App\Http\Controllers\Admin\PostCategoryController::class);
     Route::resource('post', App\Http\Controllers\Admin\PostController::class);
     Route::resource('mail-message', App\Http\Controllers\Admin\MailMessageController::class);

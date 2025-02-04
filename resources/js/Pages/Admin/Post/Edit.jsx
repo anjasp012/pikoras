@@ -1,3 +1,4 @@
+import TipTap from "@/Components/TipTap";
 import { Button, buttonVariants } from "@/Components/ui/button";
 import {
     Card,
@@ -155,12 +156,7 @@ export default function Edit({ postCategories, post }) {
 
                     <div className="grid gap-2 mb-3">
                         <Label htmlFor="post_content">Post Content</Label>
-                        <Textarea
-                            className="bg-white"
-                            id="post_content"
-                            value={values.post_content}
-                            onChange={handleChange}
-                        />
+                        <TipTap values={values} setValues={setValues} />
                     </div>
 
                     <Separator className="my-6" />

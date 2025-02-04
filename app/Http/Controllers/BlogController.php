@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $postCategories = PostCategory::all();
         $query = Post::query();
         if (isset($request->search)) {
@@ -26,12 +27,13 @@ class BlogController extends Controller
         return inertia('Blog', $data);
     }
 
-    public function byCategory(Request $request, $post_category_slug) {
+    public function byCategory(Request $request, $post_category_slug)
+    {
         $postCategory = PostCategory::where('post_category_slug', $post_category_slug)->first();
         $postCategories = PostCategory::all();
         $posts = Post::query();
         if (isset($request->search)) {
-            $posts->where('post_name', 'like','%'. $request->search . '%');
+            $posts->where('post_name', 'like', '%'. $request->search . '%');
         }
         $data = [
             'postCategory' => $postCategory,
@@ -44,14 +46,18 @@ class BlogController extends Controller
         ];
         return inertia('BlogByCategory', $data);
     }
-    public function detail($post_slug) {
+    public function detail($post_slug)
+    {
         $postCategories = PostCategory::all();
         $article = Post::where('post_slug', $post_slug)->withCount(['postComments'])->first();
-        $comments = new CommentCollection(PostComment::with(['replies'])->withCount(['replies'])->where('post_id', $article->id)->where('parent_id', NULL)->orderBy('created_at', 'desc')->paginate(5));
+        $articles = Post::where('id', '!=' ,$article->id)->where('post_category_id', $article->post_category_id)->take(4)->get();
+
+        $comments = new CommentCollection(PostComment::with(['replies'])->withCount(['replies'])->where('post_id', $article->id)->where('parent_id', null)->orderBy('created_at', 'desc')->paginate(5));
         $article->update(['view_count'=> $article->view_count + 1]);
         $data = [
             'postCategories' => $postCategories,
             'article' => $article,
+            'articles' => new PostCollection($articles),
             'comments' => $comments,
             'title' => $article->post_name,
             'meta_title' => $article->meta_title,

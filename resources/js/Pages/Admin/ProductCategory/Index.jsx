@@ -1,3 +1,4 @@
+import DeleteConfirmation from "@/Components/DeleteConfirmation";
 import { Button, buttonVariants } from "@/Components/ui/button";
 import {
     Card,
@@ -29,6 +30,8 @@ import React, { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function Index({ productCategories }) {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [productCategoryToDelete, setProductCategoryToDelete] = useState(null);
     const [params, setParams] = useState(productCategories.filtered);
 
     const timeoutRef = useRef(null);
@@ -84,12 +87,23 @@ export default function Index({ productCategories }) {
             direction: params.direction == "asc" ? "desc" : "asc",
         });
     };
-    const deleteCategory = (id) => {
-        toast.success("Successfully toasted!");
-        // router.delete(route('admin.product-category.destroy', id), {
-        //     preserveState: true,
-        //     preserveScroll: true,
-        // });
+    const handleDeleteConfirmation = (id) => {
+        setProductCategoryToDelete(id);
+        setIsDialogOpen(true);
+    };
+
+    const handleConfirmDelete = () => {
+        if (productCategoryToDelete) {
+            deleteCategory(productCategoryToDelete);
+            setIsDialogOpen(false);
+        }
+    };
+
+    const deleteCategory = async (id) => {
+        router.delete(route("admin.product-category.destroy", id), {
+            preserveState: true,
+            preserveScroll: true,
+        });
     };
 
     return (
@@ -218,11 +232,13 @@ export default function Index({ productCategories }) {
                                                 <Eye />
                                             </Link>
                                             <Button
-                                                onClick={() =>
-                                                    deleteCategory(category.id)
-                                                }
-                                                variant="destructive"
                                                 size="sm"
+                                                variant="destructive"
+                                                onClick={() =>
+                                                    handleDeleteConfirmation(
+                                                        category.id,
+                                                    )
+                                                }
                                             >
                                                 <Trash />
                                             </Button>
@@ -232,6 +248,13 @@ export default function Index({ productCategories }) {
                             ))}
                         </TableBody>
                     </Table>
+                    <DeleteConfirmation
+                        isOpen={isDialogOpen}
+                        onClose={() => setIsDialogOpen(false)}
+                        onConfirm={handleConfirmDelete}
+                        title="Delete Category"
+                        description="Are you sure you want to delete this category? This action cannot be undone."
+                    />
                 </div>
                 <ul className="flex items-center gap-x-px">
                     {productCategories.meta.links.map((link, index) => (

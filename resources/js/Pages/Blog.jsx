@@ -46,7 +46,7 @@ export default function Blog({ postCategories, posts, q }) {
                                 <div className="mb-0">
                                     <h6 className="text-[24px] font-bold mb-2">Recommended for You</h6>
                                     <div className="flex flex-col gap-3">
-                                        <Link href="dd" className="border border-black rounded w-full py-2 px-3">
+                                        {/* <Link href="dd" className="border border-black rounded w-full py-2 px-3">
                                             <div className="flex justify-between items-end">
                                                 <div className='flex flex-col'>
                                                     <h5 className='font-bold'>8 Best Quality T-Shirts for Printing</h5>
@@ -99,7 +99,7 @@ export default function Blog({ postCategories, posts, q }) {
                                                 </div>
                                                 <small className='text-[14px] text-light'>23 Januari 2025</small>
                                             </div>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 </div>
                             </div>

@@ -86,14 +86,9 @@
     }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-
-    }
-  body {
-    @apply bg-background text-foreground;
-
-    }
-
+.tiptap * {
+  all: revert;
+}
+.tiptap:focus-visible {
+  outline: none;
 }

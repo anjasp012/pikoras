@@ -19,9 +19,12 @@ export default function BlogCard({ post, imgheigh }) {
                             By Pikora Team
                         </span>
                     </div>
-                    <p className="mt-1 lg:mt-2 mb-1 font-[300] text-sm lg:text-normal line-clamp-2 md:line-clamp-3 leading-[150%]">
-                        {post.post_content}
-                    </p>
+                    <div className="mt-1 lg:mt-2 mb-1 font-[300] text-sm lg:text-normal line-clamp-2 md:line-clamp-3 leading-[150%]">
+
+                        <div dangerouslySetInnerHTML={{
+                            __html: post.post_content,
+                        }} />
+                    </div>
                     <Link
                         href=""
                         className="text-sm lg:text-normal group-hover:text-destructive"

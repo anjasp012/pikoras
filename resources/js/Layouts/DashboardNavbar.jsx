@@ -136,7 +136,7 @@ export default function DashboardNavbar({ children }) {
                                 <Link href='setting'>Setting</Link>
                             </DropdownMenuItem> */}
                             <DropdownMenuItem className="focus:bg-gray-100">
-                                <Link className="w-full" href="logout">
+                                <Link method="POST" className="text-start w-full" href={route('logout')}>
                                     Logout
                                 </Link>
                             </DropdownMenuItem>

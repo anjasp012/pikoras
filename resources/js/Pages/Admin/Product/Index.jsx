@@ -16,6 +16,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/Components/ui/select";
+import { Switch } from "@/Components/ui/switch";
 import {
     Table,
     TableBody,
@@ -107,6 +108,13 @@ export default function Index({ products }) {
             preserveScroll: true,
         });
     };
+
+    const bestSellerSwitch = async (id) => {
+        router.put(route("admin.product.bestSellerSwitch", id), {
+            preserveState: true,
+            preserveScroll: true,
+        });
+    }
 
     return (
         <Card className="bg-white border-primary/20">
@@ -201,6 +209,19 @@ export default function Index({ products }) {
                                         )}
                                     </div>
                                 </TableHead>
+                                <TableHead>
+                                    <div
+                                        onClick={() => sort("best_seller")}
+                                        className="hover:text-primary cursor-pointer flex items-center gap-x-10"
+                                    >
+                                        Best Seller
+                                        {params.direction == "asc" ? (
+                                            <ChevronUp className="h-3 w-3" />
+                                        ) : (
+                                            <ChevronDown className="h-3 w-3" />
+                                        )}
+                                    </div>
+                                </TableHead>
                                 <TableHead>Action</TableHead>
                             </TableRow>
                         </TableHeader>
@@ -225,6 +246,9 @@ export default function Index({ products }) {
                                     </TableCell>
                                     <TableCell>{product.created_at}</TableCell>
                                     <TableCell>{product.view_count}</TableCell>
+                                    <TableCell>
+                                        <Switch onCheckedChange={() => bestSellerSwitch(product.id)} checked={product.best_seller} />
+                                    </TableCell>
                                     <TableCell>
                                         <div className="flex gap-1">
                                             <Link

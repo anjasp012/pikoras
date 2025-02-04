@@ -164,4 +164,18 @@ class ProductController extends Controller
             return back()->with('error', 'An error occurred, please try again later');
         }
     }
+
+    public function bestSellerSwitch($id) {
+        $product = Product::findOrFail($id);
+        if ($product->best_seller == true) {
+            $product->update([
+                'best_seller' => false
+            ]);
+        } else {
+            $product->update([
+                'best_seller' => true
+            ]);
+        }
+        return back()->with('success', 'Product update successfully!');
+    }
 }

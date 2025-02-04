@@ -1,3 +1,4 @@
+import TipTap from "@/Components/TipTap";
 import { Button, buttonVariants } from "@/Components/ui/button";
 import {
     Card,
@@ -85,6 +86,8 @@ export default function Create({ postCategories }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        // console.log(values);
+
         router.post(route("admin.post.store"), values);
     }
     return (
@@ -152,12 +155,13 @@ export default function Create({ postCategories }) {
 
                     <div className="grid gap-2">
                         <Label htmlFor="post_content">Post Content</Label>
-                        <Textarea
+                        {/* <Textarea
                             className="bg-white"
                             id="post_content"
                             value={values.post_content}
                             onChange={handleChange}
-                        />
+                        /> */}
+                        <TipTap values={values} setValues={setValues} />
                     </div>
 
                     <Separator className="my-3" />

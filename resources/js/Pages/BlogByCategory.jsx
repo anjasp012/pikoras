@@ -87,13 +87,13 @@ export default function Blog({
                                 <div className="mb-0">
                                     <h6 className="text-[24px] font-bold mb-2">Recommended for You</h6>
                                     <div className="flex flex-col gap-3">
-                                        <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
+                                        {/* <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
                                             <h5 className='font-bold line-clamp-1 group-hover:text-primary'>8 Best Quality T-Shirts for Printing</h5>
                                             <div className="flex justify-between items-end">
                                                 <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
                                                 <small className='text-[14px] text-light'>23 Januari 2025</small>
                                             </div>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 </div>
                             </div>
