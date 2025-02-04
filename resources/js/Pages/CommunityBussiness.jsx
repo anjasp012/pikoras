@@ -51,7 +51,7 @@ export default function personalUse() {
                 </section>
                 <section className="mt-4 md:mt-10">
                     <Container>
-                        <h1 className="text-3xl sm:text-[64px] font-bold leading-[120%] text-[#191F2C] tracking-[-2%] text-center md:mb-4">
+                        <h1 className="text-3xl sm:text-[48px] font-bold leading-[120%] text-[#191F2C] tracking-[-2%] text-center md:mb-4">
                             Grade a Custom Item for Your Bussiness{" "}
                             <span className="font-medium">
                                 Order in bigger quantity!

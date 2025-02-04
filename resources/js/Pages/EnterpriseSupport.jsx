@@ -76,7 +76,7 @@ export default function personalUse() {
                         Contact Form
                     </h3>
                     <p className="text-center text-[#5d5641] font-medium text-sm md:text-2xl">
-                        Send us a message from right here using the form below!
+                        Send us a message using the form below!
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-12 justify-center mt-10 md:gap-8">
                         <div className="col-span-2 md:col-span-8 lg:col-start-3">

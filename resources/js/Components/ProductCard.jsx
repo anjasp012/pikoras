@@ -112,7 +112,7 @@ export default function ProductCard({ product }) {
                     <span className="font-[300] text-[11px] block mb-1">
                         Available on:
                     </span>
-                    <div className="grid grid-cols-3 lg:grid-cols-11 items-center gap-3 lg:gap-4">
+                    <div className="grid grid-cols-3 lg:grid-cols-11 items-center gap-3 lg:gap-6">
                         <a
                             className="col-span-1 lg:col-span-3"
                             href={`${product.link_shopee}`}

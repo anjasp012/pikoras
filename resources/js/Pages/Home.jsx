@@ -125,7 +125,7 @@ export default function Home() {
 
                                     <div className="grid grid-cols-12 gap-4 sm:gap-8 items-center">
                                         <div className="col-span-3 mx-auto">
-                                            <img src="/assets/img/premium-logo.png" alt="premium-logo" className="h-20 lg:h-[105px]" />
+                                            <img src="/assets/img/premium-logo.png" alt="premium-logo" className="w-[16vw] lg:w-[7vw]" />
                                         </div>
                                         <div className="col-span-9">
                                             <div className="font-semibold text-[#263D66] text-xl sm:text-2xl">
