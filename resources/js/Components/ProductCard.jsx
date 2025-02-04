@@ -25,6 +25,22 @@ export default function ProductCard({ product }) {
     const changeImage = (newImage) => {
         setImageSrc(newImage); // Update the image source
     };
+    const calculateReview = () => {
+        let rating = 0;
+        let review = 0;
+
+        if (product.product_reviews_count > 0) {
+            product.product_reviews.forEach((reviewItem) => {
+                rating += reviewItem.rating;
+            });
+
+            const productReviewsCount = product.product_reviews_count ?? 0;
+            review = productReviewsCount > 0 ? rating / productReviewsCount : 0;
+        }
+
+        return review;
+    };
+
 
     return (
         <Card
@@ -70,7 +86,7 @@ export default function ProductCard({ product }) {
                         {/* const rating = 3.5; */}
 
                         <div className="flex gap-px">
-                            <StarReview review={4.3} />
+                            <StarReview review={calculateReview()} />
                         </div>
 
                         <small className="text-[8px] text-[#263D66] text-light">

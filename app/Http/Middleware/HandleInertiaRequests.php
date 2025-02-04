@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\MailMessage;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Middleware;
@@ -39,6 +40,9 @@ class HandleInertiaRequests extends Middleware
             ],
             'hasNewMessage' => Cache::rememberForever('has_new_message', function () {
                 return MailMessage::where('is_read', 0)->exists();
+            }),
+            'setting' => Cache::rememberForever('setting', function () {
+                return Setting::first();
             }),
             'ziggy' => fn () => [
                 ...(new Ziggy)->toArray(),

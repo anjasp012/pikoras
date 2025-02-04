@@ -185,8 +185,8 @@ export default function personalUse() {
                             wearable art. <br />
                             Let’s Print Success Together!
                             <br />
-                            [Get a Quote] | [Contact Us] | [Explore Our
-                            Portfolio]
+                            [Get a Quote] | [Contact Us] | <Link href={route('product.index')}>[Explore Our
+                                Portfolio]</Link>
                         </p>
                     </div>
                 </Container>

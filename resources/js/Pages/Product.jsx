@@ -16,6 +16,9 @@ export default function Product({
     meta_keyword,
 }) {
 
+    console.log(products);
+
+
     return (
         <>
             <Head title={title}>

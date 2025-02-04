@@ -7,7 +7,7 @@ import { Head, Link } from "@inertiajs/react";
 import { ChevronRight } from "lucide-react";
 import React from "react";
 
-export default function personalUse({ posts }) {
+export default function personalUse({ posts, setting }) {
     return (
         <>
             <Head title="Custom T-Shirt & Phone Case untuk Personal Use. Ekspresikan Diri Anda | Pikora Star Tech">
@@ -96,24 +96,30 @@ export default function personalUse({ posts }) {
                         You Can Visit Our Official Stores
                     </h3>
                     <div className="w-[80%] lg:w-[70%] mx-auto mb-8 md:mb-14">
-                        <div className="grid grid-cols-3 sm:grid-cols-12 items-center gap-4 sm:gap-12">
+                        <div className="grid grid-cols-3 sm:grid-cols-12 gap-4 sm:gap-12">
                             <div className="col-span-1 sm:col-span-4">
-                                <img
-                                    src="/assets/img/support-shopee.png"
-                                    alt="support-shopee"
-                                />
+                                <a target="blank" href={setting.link_shopee}>
+                                    <img
+                                        src="/assets/img/support-shopee.png"
+                                        alt="support-shopee"
+                                    />
+                                </a>
                             </div>
-                            <div className="col-span-1 sm:col-span-4">
-                                <img
-                                    src="/assets/img/support-tokopedia.png"
-                                    alt="support-shopee"
-                                />
+                            <div className="col-span-1 mt-4 sm:col-span-4">
+                                <a target="blank" href={setting.link_tokopedia}>
+                                    <img
+                                        src="/assets/img/support-tokopedia.png"
+                                        alt="support-tokopedia"
+                                    />
+                                </a>
                             </div>
-                            <div className="col-span-1 sm:col-span-4">
-                                <img
-                                    src="/assets/img/support-lazada.png"
-                                    alt="support-shopee"
-                                />
+                            <div className="col-span-1 mt-5 sm:col-span-4">
+                                <a target="blank" href={setting.link_lazada}>
+                                    <img
+                                        src="/assets/img/support-lazada.png"
+                                        alt="support-lazada"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>

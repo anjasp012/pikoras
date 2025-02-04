@@ -47,7 +47,7 @@ export default function Blog({ postCategories, posts, postRecommendations, q }) 
                                     <h6 className="lg:text-[24px] font-bold mb-2">Recommended for You</h6>
                                     <div className="flex flex-col gap-3">
                                         {postRecommendations.data.map((article, index) => (
-                                            <Link href="dd" className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
+                                            <Link key={index} href={route("blog.detail", article.post_slug)} className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
                                                 <h5 className='font-bold line-clamp-1 group-hover:text-primary'>{article.post_name}</h5>
                                                 <div className="flex justify-between items-end">
                                                     <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>

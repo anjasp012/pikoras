@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function index()
     {
         $productCategories = ProductCategory::all();
-        $products = Product::with(['productVariants'])->withCount('productVariants')->orderBy('view_count', 'asc')->paginate(9);
+        $products = Product::with(['productVariants' ,'productReviews'])->withCount(['productVariants', 'productReviews'])->orderBy('view_count', 'asc')->paginate(9);
         $data = [
             'productCategories' => $productCategories,
             'products' => $products,
