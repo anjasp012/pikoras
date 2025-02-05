@@ -59,8 +59,8 @@ export default function personalUse() {
                             </span>
                         </h1>
                     </Container>
-                    <div className="relative mt-6 lg:mt-0">
-                        <div className="lg:absolute top-10 left-1/2 lg:-translate-x-1/2">
+                    <div className="relative mt-6">
+                        <div className="mb-10">
                             <div className="text-center">
                                 <Link
                                     href={route('product.index')}

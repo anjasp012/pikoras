@@ -21,6 +21,7 @@ export default function ResponsiveNavigation() {
                 <DropdownMenu>
                     <DropdownMenuTrigger>
                         <MenuIcon />
+                        <div className="sr-only">Menu</div>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white me-4">
                         <DropdownMenuItem className="focus:bg-gray-100">

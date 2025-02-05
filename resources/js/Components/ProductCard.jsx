@@ -78,11 +78,11 @@ export default function ProductCard({ product }) {
             <CardContent className="px-0 py-4">
                 <div className="flex flex-col mb-3">
                     <Link href={route("product.detail", product.product_slug)}>
-                        <h5 className="font-semibold mb-px sm:text-normal group-hover:text-primary">
+                        <h5 className="font-semibold mb-px sm:text-normal group-hover:text-primary line-clamp-1">
                             {product.product_name}
                         </h5>
                     </Link>
-                    <div className="flex gap-px sm:gap-2 items-center">
+                    <div className="flex gap-px gap-2 items-center">
                         {/* const rating = 3.5; */}
 
                         <div className="flex gap-px">
@@ -90,7 +90,7 @@ export default function ProductCard({ product }) {
                         </div>
 
                         <small className="text-[8px] text-[#263D66] text-light">
-                            100 Reviews.
+                            {product.product_reviews_count} Reviews.
                         </small>
                     </div>
                 </div>

@@ -29,33 +29,34 @@ export default function Blog({ postCategories, posts, postRecommendations, q }) 
                     <Container>
                         <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-10 mb-14">
                             {posts.data.length > 0 && (
-                                <div key={0} className="col-span-1 lg:col-span-6 lg:order-1">
+                                <div key={0} className="col-span-1 lg:col-span-6 flex lg:order-1">
                                     <BlogCard post={posts.data[0]} imgheigh={"h-[100px] md:h-[150px] lg:h-[405px]"} />
                                 </div>
                             )}
-                            <div className='col-span-1 lg:col-span-6 lg:order-2'>
-                                <div className="mb-4">
-                                    <h6 className="lg:text-[24px] font-bold mb-2">Search Blog</h6>
-                                    <form onSubmit={submit} className="flex gap-2 md:gap-4">
-                                        <Input className='bg-[#D9D9D9]/40 w-full border-none' type="text" placeholder='Search'
-                                            value={search}
-                                            onChange={(e) => setSearch(e.target.value)} />
-                                        <Button variant="destructive"><IconlySearch size={24} color='#ffffff' /></Button>
-                                    </form>
-                                </div>
-                                <div className="mb-0">
-                                    <h6 className="lg:text-[24px] font-bold mb-2">Recommended for You</h6>
-                                    <div className="flex flex-col gap-3">
-                                        {postRecommendations.data.map((article, index) => (
-                                            <Link key={index} href={route("blog.detail", article.post_slug)} className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
-                                                <h5 className='font-bold line-clamp-1 group-hover:text-primary'>{article.post_name}</h5>
-                                                <div className="flex justify-between items-end">
-                                                    <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
-                                                    <small className='text-[14px] text-light'>{article.created_at}</small>
-                                                </div>
-                                            </Link>
-                                        ))}
-                                        {/* <Link href="dd" className="border border-black rounded w-full py-2 px-3">
+                            <div className='col-span-1 lg:col-span-6 flex lg:order-2'>
+                                <div className="w-full flex flex-col h-full">
+                                    <div className="mb-4">
+                                        <h6 className="lg:text-[24px] font-bold mb-2">Search Blog</h6>
+                                        <form onSubmit={submit} className="flex gap-2 md:gap-4">
+                                            <Input className='bg-[#D9D9D9]/40 w-full border-none' type="text" placeholder='Search'
+                                                value={search}
+                                                onChange={(e) => setSearch(e.target.value)} />
+                                            <Button variant="destructive"><IconlySearch size={24} color='#ffffff' /><div className="sr-only">Search</div></Button>
+                                        </form>
+                                    </div>
+                                    <div className="mb-0">
+                                        <h6 className="lg:text-[24px] font-bold mb-2">Recommended for You</h6>
+                                        <div className="flex flex-col gap-3">
+                                            {postRecommendations.data.map((article, index) => (
+                                                <Link key={index} href={route("blog.detail", article.post_slug)} className="group border border-black rounded w-full py-2 px-3 hover:translate-x-px hover:-translate-y-px transition-all">
+                                                    <h5 className='font-bold line-clamp-1 group-hover:text-primary'>{article.post_name}</h5>
+                                                    <div className="flex justify-between items-end text-xs w-full">
+                                                        <span className='text-light'>By <span className='text-[#263D66]'>Pikora Team</span></span>
+                                                        <small className='text-[14px] text-light text-end'>{article.created_at}</small>
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                            {/* <Link href="dd" className="border border-black rounded w-full py-2 px-3">
                                             <div className="flex justify-between items-end">
                                                 <div className='flex flex-col'>
                                                     <h5 className='font-bold'>8 Best Quality T-Shirts for Printing</h5>
@@ -109,11 +110,12 @@ export default function Blog({ postCategories, posts, postRecommendations, q }) 
                                                 <small className='text-[14px] text-light'>23 Januari 2025</small>
                                             </div>
                                         </Link> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             {posts.data.slice(1).map((post, index) => (
-                                <div key={index + 1} className="col-span-1 lg:col-span-6 lg:order-3">
+                                <div key={index + 1} className="col-span-1 lg:col-span-6 flex lg:order-3">
                                     <BlogCard post={post} imgheigh={"h-[100px] md:h-[150px] lg:h-[405px]"} />
                                 </div>
                             ))}

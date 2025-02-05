@@ -84,13 +84,13 @@ export default function ProductDetail({ products, product, review, title, meta_t
                                 <h1 className="text-2xl md:text-4xl font-bold mb-1">
                                     {product.product_name}
                                 </h1>
-                                <div className="flex items-center gap-4">
+                                <div className="flex sm:flex-row flex-col items-start sm:items-center gap-4">
                                     <span className="bg-primary text-white px-4 py-1 text-xs rounded-full">{product.product_category.product_category_name}</span>
-                                    <div className="flex gap-px sm:gap-2 items-center">
+                                    <div className="flex flex-wrap gap-2 items-center">
                                         {/* const rating = 3.5; */}
 
                                         <div className="flex gap-px">
-                                            <StarReview size="sm:h-4 sm:w-4" review={review} />
+                                            <StarReview size="h-4 w-4" review={review} />
                                         </div>
 
                                         <small className="text-[12px] text-[#263D66] text-light">

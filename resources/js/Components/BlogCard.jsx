@@ -3,8 +3,8 @@ import React from "react";
 
 export default function BlogCard({ post, imgheigh }) {
     return (
-        <Link href={route("blog.detail", post.post_slug)} className="group">
-            <div className="border border-black rounded md:rounded-lg shadow-md hover:shadow-none hover:-translate-y-px hover:translate-x-px  transition-all">
+        <Link href={route("blog.detail", post.post_slug)} className="group w-full">
+            <div className="border w-full flex flex-col h-full border-black rounded md:rounded-lg shadow-md hover:shadow-none hover:-translate-y-px hover:translate-x-px  transition-all">
                 <img
                     src={post.post_thumbnail}
                     alt={post.post_name}
@@ -19,7 +19,7 @@ export default function BlogCard({ post, imgheigh }) {
                             By Pikora Team
                         </span>
                     </div>
-                    <div className="mt-1 lg:mt-2 mb-1 font-[300] text-sm lg:text-normal line-clamp-2 md:line-clamp-3 leading-[150%]">
+                    <div className="mt-1 lg:mt-2 mb-1 font-[300] text-sm lg:text-normal line-clamp-6 md:line-clamp-3 leading-[150%]">
 
                         <div dangerouslySetInnerHTML={{
                             __html: post.post_content,

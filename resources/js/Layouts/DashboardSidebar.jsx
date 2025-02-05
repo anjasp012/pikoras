@@ -78,9 +78,6 @@ export default function DashboardSidebar() {
                                 <Users className="h-4 w-4" />
                                 Visitor
                             </div>
-                            {hasNewMessage && (
-                                <span className="block h-2 w-2 bg-red-500 rounded-full me-3 animate-ping opacity-75"></span>
-                            )}
                         </Link>
                     </nav>
                 </div>

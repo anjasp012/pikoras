@@ -222,7 +222,7 @@ export default function Home() {
                     </div>
                 </div>
             </header>
-            <section className="overflow-hidden sm:mb-16">
+            <section className="overflow-hidden sm:mb-10">
                 <div className="grid grid-cols-12 mt-8">
                     <div className="col-span-12 px-4 sm:col-span-10 sm:col-start-2">
                         <h3 className="font-[900] text-2xl sm:text-[42px] text-[#191F2C] mb-1 sm:mb-2">
@@ -241,36 +241,22 @@ export default function Home() {
                                     <Slider {...settingsLeft}>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design.png"
-                                                alt="your_design"
+                                                src="/assets/img/tshirt_1.png"
+                                                alt="tshirt_1"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design.png"
-                                                alt="your_design"
+                                                src="/assets/img/tshirt_2.png"
+                                                alt="tshirt_2"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design.png"
-                                                alt="your_design"
-                                                className="w-full rounded sm:rounded-3xl"
-                                            />
-                                        </div>
-                                        <div className="px-1 sm:px-3">
-                                            <img
-                                                src="/assets/img/your_design.png"
-                                                alt="your_design"
-                                                className="w-full rounded sm:rounded-3xl"
-                                            />
-                                        </div>
-                                        <div className="px-1 sm:px-3">
-                                            <img
-                                                src="/assets/img/your_design.png"
-                                                alt="your_design"
+                                                src="/assets/img/tshirt_3.png"
+                                                alt="tshirt_3"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
@@ -278,9 +264,9 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="sm:col-span-3 px-4">
-                                <h5 className="text-2xl sm:text-[32px] leading-[110%] font-bold text-[#263D66] mb-1 sm:mb-4">
-                                    Personalized Your Own Phone Case!
-                                </h5>
+                                <h4 className="text-2xl sm:text-[32px] leading-[110%] font-bold text-[#263D66] mb-1 sm:mb-4">
+                                    Personalized Your Own Style!
+                                </h4>
                                 <p className="text-sm sm:text-[15px] text-[#191F2C]">
                                     Showcase your unique style and personality! Simply add your favorite designs, quotes or artwork and Pikora will help you to create a one-of-a-kind shirt that’s truly yours. Feel confident and stand out in your own personal style.
                                 </p>
@@ -292,10 +278,10 @@ export default function Home() {
                     <div className="col-span-12 sm:col-span-11 sm:col-start-2">
                         <div className="flex flex-col sm:grid sm:grid-cols-12 gap-4 sm:gap-8">
                             <div className="sm:col-span-3 px-4">
-                                <h5 className="text-2xl sm:text-[32px] leading-[110%] font-bold text-[#263D66] mb-2 sm:mb-4">
+                                <h4 className="text-2xl sm:text-[32px] leading-[110%] font-bold text-[#263D66] mb-2 sm:mb-4">
                                     Personalized Your
                                     Own Phone Case!
-                                </h5>
+                                </h4>
                                 <p className="text-sm sm:text-[15px] text-[#191F2C]">
                                     Protect your device in style! Choose a design that represents yourself or your interests and let Pikora turn it to life with a high quality case material. Have a case that not only keep your phone safe, but also expresses your personality well.
                                 </p>
@@ -305,36 +291,22 @@ export default function Home() {
                                     <Slider {...settingsRight}>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design_2.png"
-                                                alt="your_design_2"
+                                                src="/assets/img/case_1.png"
+                                                alt="case_1"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design_2.png"
-                                                alt="your_design_2"
+                                                src="/assets/img/case_2.png"
+                                                alt="case_2"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
                                         <div className="px-1 sm:px-3">
                                             <img
-                                                src="/assets/img/your_design_2.png"
-                                                alt="your_design_2"
-                                                className="w-full rounded sm:rounded-3xl"
-                                            />
-                                        </div>
-                                        <div className="px-1 sm:px-3">
-                                            <img
-                                                src="/assets/img/your_design_2.png"
-                                                alt="your_design_2"
-                                                className="w-full rounded sm:rounded-3xl"
-                                            />
-                                        </div>
-                                        <div className="px-1 sm:px-3">
-                                            <img
-                                                src="/assets/img/your_design_2.png"
-                                                alt="your_design_2"
+                                                src="/assets/img/case_3.png"
+                                                alt="case_3"
                                                 className="w-full rounded sm:rounded-3xl"
                                             />
                                         </div>
@@ -349,21 +321,22 @@ export default function Home() {
                 <Container>
                     <div className="pb-8">
                         <h3 className="text-center text-xl lg:text-[48px] font-bold leading-[120%] -tracking-[2%]">Create Custom Items for Your Business</h3>
-                        <h5 className="text-center text-lg lg:text-[48px] font-medium leading-[120%] -tracking-[2%]">Order in bigger quantity!</h5>
+                        <h4 className="text-center text-lg lg:text-[48px] font-medium leading-[120%] -tracking-[2%]">Order in bigger quantity!</h4>
                     </div>
                 </Container>
                 <div className="relative">
-                    <div className="lg:absolute lg:top-10 left-1/2 lg:-translate-x-1/2 mb-6 lg:mb-0">
+                    <div className="mb-10">
                         <div className="text-center">
                             <Link
                                 href={route('product.index')}
                                 className={`${buttonVariants({ variant: "destructive", size: "lg" })} !font-bold`}
                             >
                                 See More <ChevronRight />
+                                <div className="sr-only">Products Page</div>
                             </Link>
                         </div>
                     </div>
-                    <img src="/assets/img/community.png" alt="community" />
+                    <img className="w-full" src="/assets/img/community.png" alt="community" />
                 </div>
                 <Container>
                     <div className="w-full sm:w-[90%] mx-auto mt-6 sm:mt-14">
@@ -410,7 +383,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex gap-5 mt-6 items-center">
                                     <Avatar className="w-[60px] h-[60px] md:w-[81px] md:h-[81px]">
-                                        <AvatarImage src="/assets/img/sarah_putri.png" />
+                                        <AvatarImage src="/assets/img/sarah_putri.png" alt="sarah_putri" />
                                         <AvatarFallback className="bg-red-100">
                                             SP
                                         </AvatarFallback>
@@ -438,7 +411,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex gap-5 mt-6 items-center">
                                     <Avatar className="w-[60px] h-[60px] md:w-[81px] md:h-[81px]">
-                                        <AvatarImage src="/assets/img/nico_kimberly.png" />
+                                        <AvatarImage src="/assets/img/nico_kimberly.png" alt="nico_kimberly" />
                                         <AvatarFallback className="bg-red-100">
                                             NK
                                         </AvatarFallback>
